@@ -1,7 +1,6 @@
 FROM nginx:alpine
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY upstream.conf.tpl /etc/nginx/conf.d/upstream.conf.tpl
 RUN rm -fr /etc/nginx/conf.d/default.conf
 
 COPY docker-entrypoint.sh /usr/local/bin/

@@ -1,5 +1,5 @@
 #!/bin/sh
 
-/usr/local/bin/envsubst < /etc/nginx/conf.d/upstream.conf.tpl > /etc/nginx/conf.d/upstream.conf
+sed -i -e "s/PROXY_HOST/$PROXY_HOST/g" /etc/nginx/nginx.conf
 
 nginx
